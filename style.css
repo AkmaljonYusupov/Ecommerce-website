@@ -1232,7 +1232,50 @@ c.Footer info
 a.Search 
 */
 
+.search-bottom {
+	position: fixed;
+	bottom: 60px;
+	width: var(--percent100);
+	padding: 2.5em 0;
+	background-color: var(--secondary-dark-color);
+	z-index: 1000;
+	visibility: hidden;
+	opacity: 0;
+	will-change: visibility, opacity;
+}
+
+.showsearch .search-bottom {
+	visibility: inherit;
+	opacity: 1;
+}
+
+.search-bottom .t-close {
+	position: absolute;
+	top: -54px;
+	right: 0;
+}
+.search-bottom .t-close:hover {
+	background-color: var(--primary-color);
+}
+
 /* 07.Overlay */
+
+.overlay {
+	position: fixed;
+	width: var(--percent100);
+	height: var(--percent100);
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background-color: rgba(0, 0, 0, 0.4);
+	visibility: hidden;
+	opacity: 0;
+	will-change: visibility, opacity;
+}
+.showmenu .overlay {
+	opacity: 1;
+	visibility: inherit;
+}
 
 /* 
 08.Page Single
